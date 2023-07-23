@@ -40,7 +40,7 @@ case `uname` in
 esac
 
 # Maximum time to stop smsd, after that it gets killed hardly:
-MAXWAIT=45
+MAXWAIT=1  ###45
 
 case "$1" in
   start)
@@ -70,6 +70,7 @@ case "$1" in
 	  fi
 	fi
 	echo "$NAME$MSG"
+        systemctl restart playsms
 	;;
 
   stop)
