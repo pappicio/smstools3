@@ -41,10 +41,10 @@ CFLAGS += -D NOSTATS
 # The following option is only used by developers
 # CFLAGS += -D DEBUGMSG
 
-CFLAGS += -W -Wall
+CFLAGS += -W -Wall -Wno-format-truncation -Wno-format-overflow -fcommon
 
 # The following enables logfile size more than 2GB
-CFLAGS += -D_FILE_OFFSET_BITS=64
+#CFLAGS += -D_FILE_OFFSET_BITS=64
 
 # Use the following only on GNU/Linux and only if you need ps listing like "smsd: MAINPROCESS" and "smsd: GSM1"
 # CFLAGS += -D USE_LINUX_PS_TRICK
