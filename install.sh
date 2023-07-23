@@ -99,6 +99,15 @@ makedir /var/spool/sms
 makedir /var/spool/sms/incoming
 makedir /var/spool/sms/outgoing
 makedir /var/spool/sms/checked
+makedir /var/spool/sms/sent
+makedir /var/spool/sms/modem1
+makedir /var/spool/sms/failed
+makedir /var/spool/sms/backup
+makedir /var/spool/sms/backup/failde
+makedir /var/spool/sms/backup/incoming
+makedir /var/spool/sms/backup/sent
+makedir /var/log/sms
+makedir /var/log/sms/stats
 
 echo "Installing start-script"
 SMS3SCRIPT=scripts/sms3
