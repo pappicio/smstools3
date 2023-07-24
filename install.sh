@@ -124,6 +124,12 @@ else
   echo "  I do not know where to copy scripts/sms3. Please find out yourself."
 fi
 
+sudo chmod 755 /etc/init.d/sms3
+sudo chmod 644 /etc/smsd.conf
+sudo update-rc.d sms3 defaults
+sudo systemctl enable sms3
+sudo systemctl start sms3
+
 echo ""
 echo "Example script files are not installed automatically."
 echo 'Please dont forget to edit /etc/smsd.conf.'
