@@ -41,8 +41,17 @@ CFLAGS += -D NOSTATS
 # The following option is only used by developers
 # CFLAGS += -D DEBUGMSG
 
-CFLAGS += -W -Wall -Wno-format-truncation -Wno-format-overflow -fcommon
+###modificato dopo
+#CFLAGS += -W -Wall -Wno-format-truncation -Wno-format-overflow -fcommon
 
+#come da smstools3 forum
+CFLAGS += -Wno-format-truncation -Wno-format-overflow -fcommon
+
+###modificato dopo
+### The following enables logfile size more than 2GB
+#CFLAGS += -D_FILE_OFFSET_BITS=64
+
+#come da smstools3 forum
 # The following enables logfile size more than 2GB
 #CFLAGS += -D_FILE_OFFSET_BITS=64
 
