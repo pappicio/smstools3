@@ -19,7 +19,7 @@ autosplit = 3
 modem1 = /var/spool/sms/modem1
 
 [modem1]
-device = /dev/ttyUSB1
+device = /dev/ttyUSB3G
 ###init = AT^CURC=0
 init = AT
 ###init2 = AT+CPMS="ME","ME","ME"
