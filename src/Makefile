@@ -42,18 +42,18 @@ CFLAGS += -D NOSTATS
 # CFLAGS += -D DEBUGMSG
 
 ###modificato dopo
-CFLAGS += -W -Wall -Wno-format-truncation -Wno-format-overflow -fcommon
+###CFLAGS += -W -Wall -Wno-format-truncation -Wno-format-overflow -fcommon
 
 #come da smstools3 forum
-###CFLAGS += -Wno-format-truncation -Wno-format-overflow -fcommon
+CFLAGS += -Wno-format-truncation -Wno-format-overflow -fcommon
 
 ###modificato dopo
 ### The following enables logfile size more than 2GB
-#CFLAGS += -D_FILE_OFFSET_BITS=64
+###CFLAGS += -D_FILE_OFFSET_BITS=64
 
 #come da smstools3 forum
 # The following enables logfile size more than 2GB
-###CFLAGS += -D_FILE_OFFSET_BITS=64
+CFLAGS += -D_FILE_OFFSET_BITS=64
 
 # Use the following only on GNU/Linux and only if you need ps listing like "smsd: MAINPROCESS" and "smsd: GSM1"
 # CFLAGS += -D USE_LINUX_PS_TRICK
