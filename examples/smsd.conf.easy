@@ -1,5 +1,5 @@
 devices = modem1
-loglevel = 7
+loglevel = 4 #da portare a 7 per debug
 # logfiles
 stats = /var/log/sms/stats
 logfile = /var/log/sms/smsd.log
@@ -13,8 +13,10 @@ delaytime = 2
 errorsleeptime = 10
 blocktime = 180
 autosplit = 3
-# Queue configurations
+incoming_utf8 = yes
 
+
+# Queue configurations
 [queues]
 modem1 = /var/spool/sms/modem1
 
@@ -28,7 +30,10 @@ report = yes
 incoming = yes
 queues = modem1
 # mode = new
-smsc = 393770001016
+
+###smsc = 393358824940 #TIM M.
+smsc = 393770001016 HO
+
 baudrate = 115200 ###19200
 memory_start = 0
 decode_unicode_text = yes
