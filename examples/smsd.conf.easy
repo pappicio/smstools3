@@ -31,8 +31,11 @@ incoming = yes
 queues = modem1
 # mode = new
 
-###smsc = 393358824940 #TIM M.
-smsc = 393770001016 HO
+###TIM M.
+###smsc = 393358824940
+
+### HO
+smsc = 393770001016
 
 baudrate = 115200 ###19200
 memory_start = 0
