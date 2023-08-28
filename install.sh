@@ -86,6 +86,7 @@ delete $BINDIR/putsms
 
 echo "Installing some scripts"
 copy scripts/sendsms $BINDIR/sendsms
+copy scripts/smsd_eventhandler.sh $BINDIR/smsd_eventhandler.sh
 copy scripts/sms2html $BINDIR/sms2html
 copy scripts/sms2unicode $BINDIR/sms2unicode
 copy scripts/unicode2sms $BINDIR/unicode2sms
@@ -97,6 +98,7 @@ echo "Creating minimum spool directories"
 makedir /var/spool
 makedir /var/spool/sms
 makedir /var/spool/sms/incoming
+makedir /var/spool/sms/phonecalls
 makedir /var/spool/sms/outgoing
 makedir /var/spool/sms/checked
 makedir /var/spool/sms/sent
