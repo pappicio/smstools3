@@ -5,7 +5,7 @@
 ###  apt-get install procmail
 
 COUNTRY_CODE="+39"
-ADMIN_TO="393519182780" # Change this number!
+ADMIN_TO="393471122333" # Change this number!
 
 send_sms()
 {
@@ -23,8 +23,8 @@ send_sms()
         echo "Commento: Risposta Automatica da smstools eventhandler" >> $FILE
         echo "" >> $FILE
         echo -n "$2" >> $FILE
-        ###FILE2='/var/spool/sms/outgoing/'
-	FILE2='/var/spool/sms/modem1/'
+        FILE2='/var/spool/sms/outgoing/'
+	###FILE2='/var/spool/sms/modem1/'
         mv $FILE $FILE2
 }
 
@@ -51,9 +51,9 @@ fi
 
 
 # SMS forwarding Eliminare le 3 XxX !!!.
-if [ "$1" = "RECEIVEDXxX" ]; then
+if [ "$1" = "RECEIVED" ]; then
 
-  FORWARD_TO="393519182780"
+  FORWARD_TO="393471122333" ###cambiare questo numero...
   FROM=`formail -zx From: < $2`
   FROM_TOA=`formail -zx From_TOA: < $2`
   MODEM=`formail -zx Modem: < $2`
@@ -64,7 +64,7 @@ if [ "$1" = "RECEIVEDXxX" ]; then
   echo "To: $FORWARD_TO" >> $FILE
   echo "" >> $FILE
   echo "ricevuto SMS da: $FROM , testo SMS: $TEXT" >> $FILE
-  ###FILE2='/var/spool/sms/outgoing/'
-  FILE2='/var/spool/sms/modem1/'
+  FILE2='/var/spool/sms/outgoing/'
+  ###FILE2='/var/spool/sms/modem1/'
   mv $FILE $FILE2
 fi
