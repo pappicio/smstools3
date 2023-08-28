@@ -1,5 +1,8 @@
+
 devices = modem1
-loglevel = 4 #da portare a 7 per debug
+
+#7 per debug
+loglevel = 4
 # logfiles
 stats = /var/log/sms/stats
 logfile = /var/log/sms/smsd.log
@@ -8,13 +11,18 @@ outgoing = /var/spool/sms/outgoing
 checked = /var/spool/sms/checked
 failed = /var/spool/sms/failed
 incoming = /var/spool/sms/incoming
-sent = /var/spool/sms/sent 
+
+### DA AGGIUNGERE QUESTA CARTELLA PIU PERMESSI!!!!
+phonecalls = /var/spool/sms/phonecalls
+
+sent = /var/spool/sms/sent
+
 delaytime = 2
 errorsleeptime = 10
 blocktime = 180
 autosplit = 3
-incoming_utf8 = yes
 
+incoming_utf8 = yes
 
 # Queue configurations
 [queues]
@@ -31,6 +39,8 @@ incoming = yes
 queues = modem1
 # mode = new
 
+send_retries = 10
+
 ###TIM M.
 ###smsc = 393358824940
 
@@ -42,3 +52,10 @@ memory_start = 0
 decode_unicode_text = yes
 #cs_convert = yes
 report_device_details = no
+
+###phonecalls = yes
+phonecalls = clip
+voicecall_hangup_ath = yes
+
+eventhandler = /usr/local/bin/smsd_eventhandler.sh
+
