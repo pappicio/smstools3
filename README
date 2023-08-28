@@ -6,7 +6,7 @@ A copy of the online manual is in the doc directory.
 
 This version has new makefile, compatible with last releases of Linux, like Debian bullseye and Ubuntu Jammy.
 
-compiled and used and full working on Debian 22.04!
+compiled and used and full working on ubuntu 22.04!
 
 
 works great and can compiled on Ubuntu 20/22/23 ans Debian 10/11/12
