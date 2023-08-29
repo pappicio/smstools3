@@ -53,6 +53,8 @@ decode_unicode_text = yes
 #cs_convert = yes
 report_device_details = no
 
+###signal_quality_ber_ignore = yes
+
 ###phonecalls = yes
 phonecalls = clip
 voicecall_hangup_ath = yes
