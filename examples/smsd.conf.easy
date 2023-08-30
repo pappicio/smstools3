@@ -24,6 +24,11 @@ autosplit = 3
 
 incoming_utf8 = yes
 
+alarmhandler = /usr/local/bin/alarm.sh
+alarmlevel = 7
+
+############################################################
+
 # Queue configurations
 [queues]
 modem1 = /var/spool/sms/modem1
@@ -51,7 +56,7 @@ baudrate = 115200 ###19200
 memory_start = 0
 decode_unicode_text = yes
 #cs_convert = yes
-report_device_details = no
+report_device_details = yes
 
 ###signal_quality_ber_ignore = yes
 
@@ -59,5 +64,14 @@ report_device_details = no
 phonecalls = clip
 voicecall_hangup_ath = yes
 
+signal_quality_ber_ignore = yes
+
 eventhandler = /usr/local/bin/smsd_eventhandler.sh
+ignore_unexpected_input = BOOT
+
+regular_run_interval = 600
+###regular_run_cmd = AT+CREG?;+COPS?;+CSQ
+regular_run_cmd = AT+CREG?;+CSQ
+
+regular_run_statfile = /var/log/sms/status.log
 
