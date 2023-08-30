@@ -14,15 +14,15 @@ echo "$2 $3,$4, $5: $6" >> $LOG
 
 if echo -n "$6" | grep "Modem is not ready to answer commands" >/dev/null; then
   DATE=`date +"%d.%m.%Y alle ore: %T"`
-  echo "${DATE},1, $4 - $5 - $6: Alarmhandler riavvierà il servizio sms3. " >> $LOG
+  echo "${DATE},1, $4 - $5 - $6: Alarmhandler riavvierÃ  il servizio sms3. " >> $LOG
   /bin/sleep 30
   systemctl restart sms3
 fi
  
 if echo -n "$6" | grep "Input/output error" >/dev/null; then
   DATE=`date +"%d.%m.%Y alle ore: %T"`
-  echo "${DATE},1, $4 - $5 - $6: Alarmhandler riavvierà il servizio sms3. " >> $LOG
-  /bin/sleep 30
-  systemctl restart sms3
+  echo "${DATE},1, $4 - $5 - $6: Alarmhandler riavvierÃ  il servizio sms3. " >> $LOG
+###  /bin/sleep 30
+###  systemctl restart sms3
 fi
  
