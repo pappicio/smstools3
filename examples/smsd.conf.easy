@@ -24,8 +24,8 @@ autosplit = 3
 
 incoming_utf8 = yes
 
-alarmhandler = /usr/local/bin/alarm.sh
-alarmlevel = 7
+###alarmhandler = /usr/local/bin/alarm.sh
+###alarmlevel = 7
 
 ############################################################
 
