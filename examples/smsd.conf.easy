@@ -69,9 +69,9 @@ signal_quality_ber_ignore = yes
 eventhandler = /usr/local/bin/smsd_eventhandler.sh
 ignore_unexpected_input = BOOT
 
-regular_run_interval = 600
-###regular_run_cmd = AT+CREG?;+COPS?;+CSQ
-regular_run_cmd = AT+CREG?;+CSQ
+###regular_run_interval = 600
+######regular_run_cmd = AT+CREG?;+COPS?;+CSQ
+###regular_run_cmd = AT+CREG?;+CSQ
 
-regular_run_statfile = /var/log/sms/status.log
+###regular_run_statfile = /var/log/sms/status.log
 
