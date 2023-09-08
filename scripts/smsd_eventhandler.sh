@@ -5,8 +5,8 @@
 ###  apt-get install procmail
 
 COUNTRY_CODE="+39"
-ADMIN_TO="393519182780" # Change this number!
-ADMIN_TO2="393519182780" # Change this number!
+ADMIN_TO="39inserirenumeroServerSMS" # Change this number!
+ADMIN_TO2="39inserirenumeroAdmin" # Change this number!
 
 send_sms()
 {
@@ -55,7 +55,7 @@ fi
 # SMS forwarding Eliminare le 3 XxX !!!.
 if [ "$1" = "RECEIVEDXXX" ]; then
 
-  FORWARD_TO="393519182780" ###cambiare questo numero...
+  FORWARD_TO="39inserirenumeroAdmin" ###cambiare questo numero...
   FROM=`formail -zx From: < $2`
   FROM_TOA=`formail -zx From_TOA: < $2`
   MODEM=`formail -zx Modem: < $2`
