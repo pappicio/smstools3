@@ -24,8 +24,8 @@ autosplit = 3
 
 incoming_utf8 = yes
 
-###alarmhandler = /usr/local/bin/alarm.sh
-###alarmlevel = 7
+#alarmhandler = /usr/local/bin/alarm.sh
+#alarmlevel = 7
 
 ############################################################
 
@@ -35,9 +35,17 @@ modem1 = /var/spool/sms/modem1
 
 [modem1]
 device = /dev/ttyUSB3G
-###init = AT^CURC=0
-init = AT
-###init2 = AT+CPMS="ME","ME","ME"
+
+#modem: E220
+######init2 = AT+CPMS="ME","ME","ME"
+######init = AT^CURC=0
+###init = AT
+
+#modem K3765
+init = AT+CPMS="SM","SM","SM"
+incoming = high
+######## 
+
 #pin  = 1234
 report = yes
 incoming = yes
@@ -48,9 +56,11 @@ send_retries = 10
 
 ###TIM M.
 ###smsc = 393358824940
+##############################
 
 ### HO
 smsc = 393770001016
+###############################
 
 baudrate = 115200 ###19200
 memory_start = 0
@@ -72,6 +82,5 @@ ignore_unexpected_input = BOOT
 ###regular_run_interval = 600
 ######regular_run_cmd = AT+CREG?;+COPS?;+CSQ
 ###regular_run_cmd = AT+CREG?;+CSQ
-
 ###regular_run_statfile = /var/log/sms/status.log
 
