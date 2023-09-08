@@ -24,8 +24,8 @@ send_sms()
         echo "Commento: Risposta Automatica da smstools eventhandler" >> $FILE
         echo "" >> $FILE
         echo -n "$2" >> $FILE
-        FILE2='/var/spool/sms/outgoing/'
-	###FILE2='/var/spool/sms/modem1/'
+        ###FILE2='/var/spool/sms/outgoing/'
+	FILE2='/var/spool/sms/modem1/'
         mv $FILE $FILE2
 }
 
@@ -66,7 +66,7 @@ if [ "$1" = "RECEIVEDXXX" ]; then
   echo "To: $FORWARD_TO" >> $FILE
   echo "" >> $FILE
   echo "ricevuto SMS da: $FROM , testo SMS: $TEXT" >> $FILE
-  FILE2='/var/spool/sms/outgoing/'
-  ###FILE2='/var/spool/sms/modem1/'
+  ###FILE2='/var/spool/sms/outgoing/'
+  FILE2='/var/spool/sms/modem1/'
   mv $FILE $FILE2
 fi
