@@ -6,6 +6,7 @@
 
 COUNTRY_CODE="+39"
 ADMIN_TO="393519182780" # Change this number!
+ADMIN_TO2="393519182780" # Change this number!
 
 send_sms()
 {
@@ -46,6 +47,7 @@ if [ "$1" = "CALL" ]; then
                 if [ "x$ADMIN_TO" != "x" ]; then
                         send_sms "$ADMIN_TO" "Chiamata ricevuta dal numero: $FROM, il: $DATE" "SMS EventHandler!"
                 fi
+		  send_sms "$ADMIN_TO2" "Chiamata ricevuta dal numero: $FROM, il: $DATE" "SMS EventHandler!"
         fi
 fi
 
