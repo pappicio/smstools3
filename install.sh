@@ -113,7 +113,8 @@ makedir /var/log/sms
 makedir /var/log/sms/stats
 
 chown www-data:www-data -R /var/spool/sms
-chmod 777 -R /var/spool/sms 
+chmod 777 -R /var/spool/sms
+chmod 755 -R /usr/local/bin 
 
 echo "Installing start-script"
 SMS3SCRIPT=scripts/sms3
