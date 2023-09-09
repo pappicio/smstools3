@@ -40,11 +40,11 @@ device = /dev/ttyUSB3G
 ######init2 = AT+CPMS="ME","ME","ME"
 ######init = AT^CURC=0
 ###init = AT
-
+#############################
 #modem K3765
 init = AT+CPMS="SM","SM","SM"
 incoming = high
-######## 
+############################ 
 
 #pin  = 1234
 report = yes
