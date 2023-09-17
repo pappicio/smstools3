@@ -70,7 +70,14 @@ case "$1" in
 	  fi
 	fi
 	echo "$NAME$MSG"
-        systemctl restart playsms
+        service="playsms.service"
+	if [ -f "/etc/systemd/system/$service" ]; then
+		echo riavvio il servizio di playsms
+	    	systemctl restart playsms
+		echo fatto!
+	else
+        	echo playsms.service non esiste, installarlo!!!
+	fi
 	;;
 
   stop)
